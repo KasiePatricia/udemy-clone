@@ -1,0 +1,585 @@
+/* Navigatin Bar */
+body {
+    margin: 0;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    padding: 9px;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 5px 5px 16px rgba(128, 128, 128, 0.382);
+    z-index: 1;
+    position: relative;
+}
+
+nav button {
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.87rem;
+    cursor: pointer;
+    margin: 3px;
+    width: max-content;
+    white-space: nowrap;
+}
+
+nav form {
+    display: flex;
+    width: 100%;
+    margin-right: 90px;
+    position: relative;
+    right: 10px;
+    margin: auto;
+}
+
+nav form input {
+    border: 0.1em solid black;
+    padding: 0px 2.4rem 0px 2.4rem;
+    display: flex;
+    align-items: stretch;
+    border-radius: 30px;
+    width: 100%;
+    height: 47px;
+    margin-right: 2px;
+    background-color: rgba(0, 0, 0, 0.029);
+}
+
+nav form input:focus {
+    outline: none;
+}
+
+nav form button {
+    border: none;
+    position: relative;
+    background: rgba(76, 175, 80, 0);
+    left: 35px;
+}
+
+.menu_icon {
+    display: none;
+}
+.logo {
+    border: none;
+    height: 2.1rem;
+    background-color: white;
+    position: relative;
+    top: 4px;
+}
+
+.sign_up {
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 15px 0px 15px;
+}
+
+.log_in {
+    border: 1px solid black;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 20px 0px 20px;
+}
+
+.cart {
+    padding: 11px 14px;
+    height: max-content;
+}
+
+.globe {
+    border: 1px solid black;
+    margin-right: 8px;
+    padding: 11px 14px;
+    height: 40px;
+}
+
+.page {
+    max-width: 1340px;
+    margin: auto;
+}
+
+/* Header  */
+
+header {
+    z-index: -1;
+    /* display: flex; */
+}
+header div {
+    height: 530px;
+    /* width: 83rem; */
+    background-image: url(assets/alarm_background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+header div div {
+    min-height: 42%;
+    min-width: 337px;
+    display: inline-block;
+    background-image: none;
+    background-color: white;
+    padding: 0.1rem 1.3rem 2.3rem 1.3rem;
+    position: relative;
+    height: 42%;
+    width: 29%;
+    top: 15%;
+    left: 5%;
+    box-shadow: 1px 1px 19px rgba(128, 128, 128, 0.31);
+    line-height: 29px;
+}
+header div div h1{
+    margin-top: 20px;
+}
+header div div p {
+    font-size: 19px;
+}
+
+.small_header {
+    display: none;
+}
+
+
+/* Courses */
+.courses {
+    padding: 0 2%;
+}
+.courses h1 {
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 10px;
+}
+.courses p {
+    font-size: larger;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav-item button{
+    border: none;
+    background: none;
+    font-weight: bold;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 0px;
+    margin-right: 20px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: grey;
+    margin-bottom: 10px;
+ }
+
+.nav-item + .active button{
+    color: black;
+}
+
+.courses_box {
+    border: 1px solid rgba(128, 128, 128, 0.365);
+}
+.courses_box h2 {
+    font-size: x-large;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.courses_box p {
+    font-size: 16px;
+    color: rgb(62, 62, 62);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    line-height: 22px;
+}
+.courses_box > div {
+    margin: 30px;
+}
+.courses_box div button {
+    border: 1px solid black;
+    padding: 12px 15px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(43, 43, 43);
+}
+.carousel-control-next,.carousel-control-prev {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+.carousel-control-next {
+    margin: 100px 0px;
+    margin-left: 29px;
+}
+
+.carousel-control-prev {
+    margin: 100px 0px;
+    margin-right: 44px;
+
+}
+.carousel-item {
+    margin: 19px;
+}
+/* .courses_ul {
+    margin: 30px;
+    margin-left: 48px;
+    display: flex;
+    width: 96%;
+} */
+.carousel-inner {
+    display: flex;
+}
+.course {
+    width: 240px;
+}
+.card-img-top {
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+.card {
+    width: 220px !important;
+    border: none;
+}
+.card-body {
+    padding: 0;
+}
+.card-title {
+    font-size: 1rem !important;
+    padding-top: 8px;
+}
+.d-flex-gap {
+    gap: 20px;
+}
+
+.d-flex-gap-1 {
+    gap: 7px;
+}
+.student-img {
+    width: 100px;
+    height: 100px;
+}
+
+.student-card {
+    width: 256px !important;
+    gap: 8px;
+}
+
+.courses_list .courses_ul .course {
+    margin: 0px 27px 30px -10px;
+}
+.courses_list .courses_ul .course img {
+    height: 132px;
+    width: 232px;
+    border: 1px solid grey;
+}
+
+.courses_list .courses_ul .course .title {
+    width: 232px;
+    margin: 0px;
+    margin-top: 2px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.courses_list .courses_ul .course .author {
+    width: 232px;
+    margin: 6px 0px 3px 0px;
+    font-size: small;
+    font-weight: 100;
+}
+
+.courses_list .courses_ul .course .price {
+    display: inline;
+    width: 232px;
+    margin: 0px;
+}
+
+.courses_list .courses_ul .course .old_price {
+    display: inline;
+    font-weight: 120;
+    font-size: 15px;
+    text-decoration: line-through;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    position: relative;
+    left: 10px;
+    margin: 0px;
+}
+
+/* features */
+.features {
+    padding: 3rem 2.4rem;
+    margin: 6.4rem 0;
+    width: 100%;
+    max-width: 134rem;
+    background-color: rgb(239, 237, 237);
+}
+
+.features h2 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.features h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.6rem;
+}
+
+.features .treading-category a {
+    color: #5624d0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.features .details {
+    margin-top: 0.8rem;
+    color: #6a6f73;
+    font-size: 1.4rem;
+}
+.treading-category {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+    width: calc(100%/4 - 1.6rem);
+}
+
+.treading-category div {
+    margin-top: 2.4rem;
+}
+.cat_card {
+    width: 20rem;
+}
+.checked {
+    color: darkorange;
+}
+
+.rating {
+    width: 100%;
+    font-size: small;
+}
+
+
+@media (max-width: 1300px) {
+    .udemy_business {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .udemy_teach {
+        display: none;
+    }
+}
+
+@media (max-width: 833px) {
+    .courses_categories li {
+        margin-right: 30px;
+    }
+    .courses_categories {
+        flex-wrap: wrap;
+        width: auto;
+        min-width: 10px;
+        justify-content: flex-start;
+        line-height: 40px;
+    }
+    .cat {
+        display: none;
+    }
+    header div {
+        background-image: url(assets/small_alarm.png);
+    }
+    header div div {
+        height: 42%;
+        width: 84%;
+        top: 90%;
+        left: 5%;
+        background-color: white;
+    }
+    header div div p {
+        font-size: larger;
+    }
+    .break {
+        height: 230px;
+    }
+}
+
+@media (max-width: 692px) {
+    .cart,
+    nav form,
+    .sign_up,
+    .log_in,
+    .globe {
+        display: none;
+    }
+
+    .menu_icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+}
+
+/* footer */
+footer {
+    width: 100%;
+    color: #fff;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.footer-innerdiv1 {
+    display: flex;
+    padding: 30px 20px 30px 20px;
+    border-top: 1px solid #e8e9eb;
+}
+
+.col1 {
+    flex: 2;
+}
+
+.col2, .col3 {
+    flex: 2;
+}
+
+.col4 {
+    flex: 2;
+}
+
+.footer-ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer-li {
+    cursor: pointer;
+    padding: 0px 5px 15px 5px;
+}
+
+.English-btn:hover {
+    background-color: #e8e9eb;
+}
+
+.English-btn>i {
+    padding: 10px;
+}
+
+/* FOOTER Last div  CSS*/
+
+.footer-innerdiv2 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 25px;
+    border-top: 1px solid #e8e9eb;
+}
+
+.left-contlist {
+    display: flex;
+    align-items: center;
+    /* flex-basis: 48%; */
+}
+
+
+.ullist-right {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.copyright-span:hover {
+    cursor: auto;
+}
+
+.r-li-itm {
+    font-size: 13px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.r-li-itm:hover {
+    color: #003845;
+    cursor: pointer;
+}
+
+/* above footer css */
+
+.above-footer {
+    /* border: 1px solid black; */
+    font-size: small;
+    /* background-color: darkcyan; */
+    display: flex;
+    margin: 50px 0px 20px 0px;
+}
+
+.ab-div1 {
+    flex: 2.5;
+    /* border: 1px solid darkblue; */
+}
+
+.ab-div2 {
+    flex: 1;
+    color: #686f7a;
+    /* border: 1px solid darkblue; */
+}
+
+.ab-ul {
+    /* background-color: yellow; */
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    padding-left: 100px;
+    /* border: 1px solid saddlebrown; */
+    display: inline-block;
+}
+
+.ab-li {
+    margin: -2px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-right: 0px;
+    padding: 10px 15px 10px 15px;
+    background: none;
+    color: #007791;
+}
+.ab-emoji{
+    font-size: 27px;
+    padding: 1px 5px 0;
+    cursor: pointer;   
+}
+.emoji-active{
+    background-color: #f2f3f5;
+}
+.ab-emoji:hover{
+    background-color: #f2f3f5;
+}
+
+.ab-li:first-child {
+    border-radius: 2px 0px 0px 2px;
+    color: #fff;
+    background-color: #007791;
+    border-color: #007791;
+}
+
+.ab-li:last-child {
+    border-right: 1px solid #ddd;
+    border-radius: 0px 2px 2px 0px;
+}
+
+.ab-li:nth-child(5) {
+    color: #ddd;
+}
+
+.ab-li:nth-child(2):hover, .ab-li:nth-child(3):hover, .ab-li:nth-child(4):hover, .ab-li:nth-child(6):hover {
+    border-color: #007791;
+    background-color: #e6f2f5;
+    border-right: 1px solid #007791;
+    cursor: pointer;
+}

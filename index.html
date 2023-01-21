@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemy Clone</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- CSS only -->
+  </head>
+  <body>
+    <nav>
+      <button class="menu_icon">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <button>
+        <img
+          class="logo"
+          src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+          alt="udemy logo"
+        />
+      </button>
+
+      <button class="cat" type="button">Categories</button>
+
+      <!-- Search  -->
+      <form>
+        <button type="button" onclick="search()">
+          <i class="fa fa-search"></i>
+        </button>
+        <input
+          id="search_query"
+          type="text"
+          placeholder="Search for anything"
+        />
+      </form>
+      <!-- ----- -->
+
+      <button class="udemy_business" type="button">Udemy Business</button>
+
+      <button class="udemy_teach" type="button">Teach on Udemy</button>
+
+      <button class="cart" type="button">
+        <i class="material-icons">shopping_cart</i>
+      </button>
+
+      <button class="log_in" type="button">Log in</button>
+
+      <button class="sign_up" type="button">Sign up</button>
+
+      <button class="globe">
+        <i class="fa fa-globe"></i>
+      </button>
+    </nav>
+    <div class="page">
+      <!-- Header -->
+      <header>
+        <div>
+          <div>
+            <h1>New to Udemy? Lucky you.</h1>
+            <p>
+              Courses start at E£169.99. Get your new student offer before it
+              expires.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- ---------- -->
+      <section class="courses">
+        <h1>A broad selection of courses</h1>
+        <p>
+          Choose from 185,000 courses with new additions published every month
+        </p>
+
+        <ul class="nav">
+          <li class="nav-item"></li>
+          <!-- 🤷‍♂️ -->
+          <li id="cat1" class="nav-item">
+            <button onclick="cat_search('python','cat1')">Python</button>
+          </li>
+          <li id="cat2" class="nav-item">
+            <button onclick="cat_search('Excel','cat2')">Excel</button>
+          </li>
+          <li id="cat3" class="nav-item">
+            <button onclick="cat_search('Web Development','cat3')">
+              Web Development
+            </button>
+          </li>
+          <li id="cat4" class="nav-item">
+            <button onclick="cat_search('JavaScript','cat4')">
+              JavaScript
+            </button>
+          </li>
+          <li id="cat5" class="nav-item">
+            <button onclick="cat_search('Data Science','cat5')">
+              Data Science
+            </button>
+          </li>
+          <li id="cat6" class="nav-item">
+            <button onclick="cat_search('AWS Certification','cat6')">
+              AWS Certification
+            </button>
+          </li>
+          <li id="cat7" class="nav-item">
+            <button onclick="cat_search('Drawing','cat7')">Drawing</button>
+          </li>
+          <li id="cat" class="nav-item">
+            <button onclick="cat_search('','cat')"></button>
+          </li>
+        </ul>
+
+        <section class="courses_box">
+          <div
+            id="carouselExampleControls"
+            class="carousel courses_list"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner courses_ul">
+              <!-- ----- inserting carousel cards here ------ -->
+              <div class="carousel-item active d-flex d-flex-gap">
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://img-c.udemycdn.com/course/480x270/1034284_4cad_5.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">
+                      Python for beginners with example
+                    </h5>
+                    <p class="card-text text-secondary fs-6">Jason Payn</p>
+                    <span class="align-span">
+                      <ul id="ul-list" style="padding: 0; font-size: 14px">
+                        <span>4.6</span>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i
+                          class="fas fa-star-half-alt"
+                          style="color: #f4c150"
+                        ></i>
+                        <span>(19,000)</span>
+                      </ul>
+                      <p class="price">
+                        <b>$10.99</b>
+                      </p>
+                    </span>
+                    <a href="#" class="btn btn-warning"> Best Seller </a>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://img-c.udemycdn.com/course/480x270/567828_67d0.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">
+                      the Complete Python bootcamp from zero to hero
+                    </h5>
+                    <p class="card-text text-secondary fs-6">Jason Payn</p>
+                    <span class="align-span">
+                      <ul id="ul-list" style="padding: 0; font-size: 14px">
+                        <span>4.6</span>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i
+                          class="fas fa-star-half-alt"
+                          style="color: #f4c150"
+                        ></i>
+                        <span>(19,000)</span>
+                      </ul>
+                      <p class="price">
+                        <b>$10.99</b>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://img-c.udemycdn.com/course/480x270/543600_64d1_4.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">
+                      Automate the boring stuff with python programming
+                    </h5>
+                    <p class="card-text text-secondary fs-6">Jason Payn</p>
+                    <span class="align-span">
+                      <ul id="ul-list" style="padding: 0; font-size: 14px">
+                        <span>4.6</span>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i
+                          class="fas fa-star-half-alt"
+                          style="color: #f4c150"
+                        ></i>
+                        <span>(19,000)</span>
+                      </ul>
+                      <p class="price">
+                        <b>$10.99</b>
+                      </p>
+                    </span>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://img-c.udemycdn.com/course/480x270/535622_3bc0.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-capitalize">
+                      python for data structure, algorithms, and interviews
+                    </h5>
+                    <p class="card-text text-secondary fs-6">Jason Payn</p>
+                    <span class="align-span">
+                      <ul id="ul-list" style="padding: 0; font-size: 14px">
+                        <span>4.6</span>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i
+                          class="fas fa-star-half-alt"
+                          style="color: #f4c150"
+                        ></i>
+                        <span>(19,000)</span>
+                      </ul>
+                      <p class="price">
+                        <b>$10.99</b>
+                      </p>
+                    </span>
+                    <a href="#" class="btn btn-warning"> Best Seller </a>
+                  </div>
+                </div>
+                <div class="card" style="width: 18rem">
+                  <img
+                    src="https://img-c.udemycdn.com/course/480x270/519554_da68_6.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Teach your kids to code: using python
+                    </h5>
+                    <p class="card-text text-secondary fs-6">Jason Payn</p>
+                    <span class="align-span">
+                      <ul id="ul-list" style="padding: 0; font-size: 14px">
+                        <span>4.6</span>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i class="fas fa-star" style="color: #f4c150"></i>
+                        <i
+                          class="fas fa-star-half-alt"
+                          style="color: #f4c150"
+                        ></i>
+                        <span>(19,000)</span>
+                      </ul>
+                      <p class="price">
+                        <b>$10.99</b>
+                      </p>
+                    </span>
+                    <a href="#" class="btn btn-warning"> Best Seller </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev bg-black opacity-100"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next bg-black opacity-100"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section class="students mx-3">
+        <h2 class="my-3">Students are viewing</h2>
+        <div class="d-flex flex-wrap d-flex-gap-1">
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div><div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+          <div class="card d-flex flex-row student-card">
+            <img
+              src=https://img-c.udemycdn.com/course/100x100/1565838_e54e_16.jpg
+              class="card-img-top student-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Teach your kids to code: using python</h5>
+              <p class="card-text text-secondary fs-6" style="padding: 0; font-size: 14px; margin: 0;">Jason Payn</p>
+              <span class="align-span">
+                <ul id="ul-list" style="padding: 0; font-size: 12px; margin: 0;">
+                  <span>4.6</span>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star" style="color: #f4c150"></i>
+                  <i class="fas fa-star-half-alt" style="color: #f4c150"></i>
+                  <span>(19,000)</span>
+                </ul>
+                <p class="price">
+                  <b>$10.99</b>
+                </p>
+              </span>
+              <a href="#" class="btn btn-warning"> Best Seller </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    
+      <section class="features">
+        <h2>Featured topics by categories</h2>
+        <div class="d-flex flex-wrap justify-content-between">
+            
+            <div class="treading-category">
+                <h3>Development</h3>
+                <div>
+                        <a href="">Python</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">Web Development</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">Machine Learning</a>
+                        <div class="details">36,354,994 students</div>
+                  
+                </div>
+            </div>
+            <div class="treading-category">
+                <h3>Business</h3>
+                <div>
+                        <a href="">Financial Analysis</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">SQL</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">PMP</a>
+                        <div class="details">36,354,994 students</div>
+                  
+                </div>
+            </div>
+            <div class="treading-category">
+                <h3>IT and software</h3>
+                <div>
+                        <a href="">AWS Certification</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">Ethical Hacking</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">Cyber Security</a>
+                        <div class="details">36,354,994 students</div>
+                  
+                </div>
+            </div>
+            <div class="treading-category">
+                <h3>Design</h3>
+                <div>
+                        <a href="">Photoshop</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">Graphics Designing</a>
+                        <div class="details">36,354,994 students</div>
+                    
+                </div>
+                <div>
+                        <a href="">drawing</a>
+                        <div class="details">36,354,994 students</div>
+                  
+                </div>
+            </div>
+                
+        </div>
+        <a href="#" class="btn btn-outline-dark">Explore more topics</a>
+      </section>
+
+      <section class="trust features text-center bg-white">
+        <h2 class="mb-0">Trusted by over 13,400 great teams</h2>
+        <p>Leading companies use the same courses to help employees keep their skills fresh.</p>
+        <div class="trust-companies">
+            <ul class="d-flex justify-content-between flex-wrap">
+                <li class="list-unstyled"><img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-dark.svg" alt=""></li>
+                <li class="list-unstyled"><img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-dark.svg" alt=""></li>
+                <li class="list-unstyled"><img src="https://s.udemycdn.com/partner-logos/v4/box-dark.svg" alt=""></li>
+                <li class="list-unstyled"><img src="https://s.udemycdn.com/partner-logos/v4/netapp-dark.svg" alt=""></li>
+                <li class="list-unstyled"><img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-dark.svg" alt=""></li>
+                <li class="list-unstyled"><img src="https://s.udemycdn.com/partner-logos/v4/tcs-dark.svg" alt=""></li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="u-business">
+        <div class="d-flex justify-content-center">
+            <div class="d-flex flex-column justify-content-center" style="margin-right: 90px;">
+                <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-ub.svg" alt="" style="width: 200px; ">
+                <h2>Upskill your team with Udemy Business</h2>
+                <ul>
+                    <li>Unlimited access to 19,000+ top Udemy courses, anytime, anywhere</li>
+                    <li>International course collection in 14 languages</li>
+                    <li>Top certifications in tech and business</li>
+                </ul>
+                <div class="button-group d-flex">
+                    <button class="btn btn-dark">Get Udemy Business</button>
+                    <button class="btn btn-outline-dark">Learn More</button>
+                </div>
+            </div>
+            <div>
+                <img src="https://s.udemycdn.com/home/non-student-cta/UB_Promo_800x800.jpg" alt="" style="width: 500px; height: 500px;">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center my-5">
+            <div>
+                <img src="https://s.udemycdn.com/home/non-student-cta/instructor-2x-v3.jpg" alt="" style="width: 500px; height: 500px;">
+            </div>
+            <div class="d-flex flex-column justify-content-center" style="margin-left: 90px; width: 40%;">
+                <h2>Become an instructor</h2>
+                <p>Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.</p>
+                <button class="btn btn-dark" style="width: 40%;"> Start Teaching Now</button>
+            </div>
+        </div>
+      </section>
+
+    <footer class="bg-dark">
+      <div class="footer-innerdiv1">
+        <div class="col1">
+          <ul class="footer-ul">
+            <li class="footer-li" style="font-weight: 700">
+              Udemy Business
+            </li>
+            <li class="footer-li" style="font-weight: 700">
+              Teach on Udemy
+            </li>
+            <li class="footer-li"> Get the app</li>
+            <li class="footer-li">About us</li>
+            <li class="footer-li">Contact us</li>
+          </ul>
+        </div>
+        <div class="col2">
+          <ul class="footer-ul">
+            <li class="footer-li">Careers</li>
+            <li class="footer-li">Blog</li>
+            <li class="footer-li">Help and Support</li>
+            <li class="footer-li">Affiliate</li>
+            <li class="footer-li">Investors</li>
+          </ul>
+        </div>
+        <div class="col3">
+          <ul class="footer-ul">
+            <li class="footer-li">Terms</li>
+            <li class="footer-li">Privacy policy</li>
+            <li class="footer-li">Cookie setting</li>
+            <li class="footer-li">Sitemap</li>
+            <li class="footer-li">Accessibility statement</li>
+          </ul>
+        </div>
+        <div class="">
+          <ul class="footer-ul" style="margin: 0px">
+            <li class="footer-li">
+              <button class="btn btn-outline-light">
+                <span
+                  style="margin-left: 10px; margin-right: 15px; padding: 5px"
+                >
+                  <i class="fas fa-globe-asia" style="margin-right: 10px"></i
+                  >English</span
+                >
+            
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LAST DIV -->
+
+      <div class="footer-innerdiv2">
+        <!-- Div 1  -->
+        <div class="left-contlist">
+          <a href="javascript:void{0}">
+            <img
+              src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg"
+              alt="udemy-logo"
+              width="110px"
+            />
+          </a>
+        </div>
+
+        <!-- Div 2 -->
+        <div class="right-contlist">
+            <span class="copyright-span" style="margin-left: 20px;"
+            >Copyright © 2018 Udemy, Inc.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
